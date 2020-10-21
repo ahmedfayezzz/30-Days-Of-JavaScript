@@ -1923,7 +1923,7 @@ const countries = [
     currency: 'British pound'
   },
   {
-    name: 'United States of America',
+    name: 'USA',
     capital: 'Washington, D.C.',
     languages: ['English'],
     population: 323947000,

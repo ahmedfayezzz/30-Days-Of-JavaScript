@@ -7,31 +7,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>World Countries Data</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <header id="countries">
-        <h2>World Countries Data</h2>
+        <h1>World Countries Data</h1>
         <p class="subtitle"></p>
         <p class="feedback"></p>
     </header>
     <main>
-
-        <div class="wrapper">
-            <div class="graph-buttons">
-                <button class="population">Population</button>
-                <button class="languages">Languages</button>
-            </div>
-            <h4 class="graph-title"></h4>
-            <div class="graphs">
-                <div class="graph-wrapper" id="stat"></div>
-            </div>
+      <form>
+        <div class="bar">
+          <input 
+          type="text" 
+          name="search" 
+          id="search-bar"
+          class="search-bar"
+          placeholder="Search countries by Name, Capital, Language and Currency">
         </div>
+        <p class="subtitle">Sort by</p>
+        <div class="sort-bar">
+          <select onchange="handleSelect()" id="sort" >
+            <!-- <option value="" disabled selected>-- Sort by --</option> -->
+            <option value="language">Language</option>
+            <option value="capital">Capital</option>
+            <option value="currency">Currency</option>
+          </select>
+        </div>
+        <!-- <p class="subtitle">Sort by</p>
+        <button onclick="handleClick(this)" class="population">Population</button>
+        <button onclick="handleClick(this)" class="languages">Languages</button> -->
+      </form>
+      <div class="countries-search">
+        <ul class="cards-list"></ul>
+      </div>
+      <div class="wrapper">
+          <div class="graph-buttons">
+              <button onclick="handleClick(this)" class="population">Population</button>
+              <button onclick="handleClick(this)" class="languages">Languages</button>
+          </div>
+          <h4 class="graph-title"></h4>
+          <div class="graphs-container">
+            <h4 class="world-pop"></h4>
+            <div class="graphs">
+              <ul class="names"></ul>
+              <ul class="bars"></ul>
+              <ul class="numbers"></ul>
+            </div>
+          </div>
+      </div>
     </main>
 
     <script src="./data/countries_data.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./scripts/main.js"></script>
 
 </body>
 
